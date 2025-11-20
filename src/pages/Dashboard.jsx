@@ -78,7 +78,7 @@ function Dashboard({ user, onLogout }) {
                     </h2>
                     <p style={{ color: '#64748b', fontSize: '1.1rem' }}>
                         {user.role === 'ADMIN'
-                            ? 'Panel de control general y monitoreo de flota.'
+                            ? 'Panel de control general y monitoreo de empleados.'
                             : 'Aquí tienes tu asignación actual y estado.'}
                     </p>
                 </header>
@@ -129,3 +129,4 @@ function Dashboard({ user, onLogout }) {
 }
 
 export default Dashboard
+

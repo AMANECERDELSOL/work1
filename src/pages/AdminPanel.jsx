@@ -84,7 +84,6 @@ function AdminPanel({ user, onLogout }) {
                                     <tr>
                                         <th>Nombre</th>
                                         <th>Usuario</th>
-                                        <th>Especialidades</th>
                                         <th>Estado</th>
                                         <th>Acciones</th>
                                     </tr>
@@ -97,15 +96,6 @@ function AdminPanel({ user, onLogout }) {
                                                 <div style={{ fontSize: '12px', color: '#666' }}>{tech.email}</div>
                                             </td>
                                             <td>@{tech.username}</td>
-                                            <td>
-                                                <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                                                    {tech.specialties?.map((spec, idx) => (
-                                                        <span key={idx} className="badge badge-pending" style={{ fontSize: '10px' }}>
-                                                            {spec}
-                                                        </span>
-                                                    )) || <span style={{ color: '#999' }}>-</span>}
-                                                </div>
-                                            </td>
                                             <td>
                                                 <span className={`badge ${tech.is_active ? 'badge-completed' : 'badge-danger'}`}>
                                                     {tech.is_active ? 'ACTIVO' : 'INACTIVO'}
@@ -138,3 +128,4 @@ function AdminPanel({ user, onLogout }) {
 }
 
 export default AdminPanel
+
